@@ -42,12 +42,12 @@ const ImageCollector = ({route, navigation}) => {
         ))}
       </ScrollView>
       <View style={styles.buttonContainer}>
-        {images.length < 7 && (
+        {images.length < 3 && (
           <Button title="Add Image" onPress={handleImageAdd} />
         )}
         <Button
           title="Continue"
-          disabled={images.length < 7}
+          disabled={images.length < 3}
           onPress={() => navigation.navigate('ImagePreview', {images})}
         />
       </View>
